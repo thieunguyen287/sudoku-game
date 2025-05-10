@@ -3,7 +3,7 @@ import cors from 'cors';
 import { sudokuRoutes } from './routes/sudoku.routes';
 
 const app = express();
-const PORT = process.env.PORT || 12000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 12000;
 
 // Middleware
 app.use(cors({
